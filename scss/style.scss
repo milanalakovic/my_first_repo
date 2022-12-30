@@ -1,0 +1,1195 @@
+@import 'fonts';
+@import 'vars';
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: lato;
+}
+
+nav {
+    background-color: $white;
+    padding: 0.6em 3em 0.6em 4.3em;
+
+    .nav_Wrapper {
+        @include flex;
+        flex-wrap: wrap;
+        min-height: 7em;
+
+        .logo {
+            flex: 1;
+
+            img {
+                padding: 0.3em 0;
+            }
+
+        }
+
+        .search {
+
+
+            input {
+                width: 11em;
+                height: 3.1em;
+                border-radius: 2em;
+                border: none;
+                outline-color: $darkGray;
+                background-color: #c3bfbc;
+                background-image: url(../images/Search.png);
+                background-repeat: no-repeat;
+                background-position: 7.2em;
+                padding: 0 1em;
+            }
+        }
+    }
+}
+
+
+
+ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0 3.7em;
+
+    .dummy {
+        text-decoration: none;
+        color: $darkGray;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: bold;
+        padding: 0 3em;
+        display: none;
+    }
+
+
+    .navLi {
+        display: inline-flex;
+        height: 2em;
+        align-items: center;
+        border-radius: 2em;
+
+
+        &:hover {
+            background-color: #e9e7e5;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: $darkGray;
+            text-transform: uppercase;
+            font-size: 1em;
+            font-weight: bold;
+            padding: 0 3em;
+        }
+    }
+}
+
+.offersWrapper {
+    background-image: url(../images/Shadow\ .png);
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    min-height: 60em;
+
+    .offersTitle {
+        @include flex;
+        flex-direction: column;
+        text-align: center;
+
+        h1 {
+            color: $dark-orange;
+            text-transform: uppercase;
+            font-size: 3em;
+            font-family: sans-serif;
+            padding: 2em 0 1em 0;
+        }
+
+        p {
+            color: $gray;
+            width: 50%;
+        }
+    }
+
+    .offers {
+        @include flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 2em 0;
+        margin: auto;
+
+
+
+        .offer {
+            margin: 1.4em;
+            background-color: #7f7770f2;
+            transition: 400ms ease 10ms;
+
+
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+
+
+
+            h3 {
+                color: $white;
+                padding: 3.5em 0 1em 0.7em;
+                align-self: flex-start;
+
+            }
+
+            p {
+                align-self: flex-start;
+                padding: 0 0 3.7em 0.7em;
+                color: $white;
+            }
+
+            img {
+                width: 100%;
+            }
+
+
+
+        }
+    }
+
+    .showMoreOffers button {
+        @include flex;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $white;
+        font-size: 1em;
+        width: 15em;
+        height: 3.1em;
+        border-radius: 2em;
+        border: none;
+        background-color: $gray;
+        margin: auto;
+
+
+        &:hover {
+            background-color: #a39a92;
+        }
+    }
+}
+
+
+
+
+.timeForHiking {
+    min-height: 80vh;
+    background-image: url(../images/Main\ background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .timeForHikingWrapper {
+        padding: 20em;
+        padding-left: 4em;
+
+
+
+        h1 {
+            color: $light-orange;
+            font-size: 7em;
+            padding-bottom: 0.2em;
+            width: 6em;
+            text-transform: uppercase;
+            font-family: sans-serif;
+        }
+    }
+
+    h4 {
+        font-size: 1.5em;
+        font-style: italic;
+        color: $darkGray;
+    }
+}
+
+.readMoreButton {
+    padding-top: 3.6em;
+
+    button {
+        background-color: #fefefd;
+        color: #776c64;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 1em;
+        width: 11em;
+        height: 2.5em;
+        border-radius: 2em;
+        border: none;
+
+
+        &:hover {
+            background-color: $white;
+            color: $hover-gray;
+
+
+        }
+    }
+
+    p {
+        width: 20em;
+        padding-top: 2em;
+        font-style: italic;
+        font-size: 1.5em;
+        color: $darkGray;
+
+        #more {
+            display: none;
+        }
+    }
+
+}
+
+.discountWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+
+    .discount {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        background-color: $gray;
+
+
+        .discountImg {
+            width: 50%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+            }
+        }
+
+        .discountDescription {
+            width: 50%;
+            padding: 0 3em 0 3em;
+
+            h1 {
+                font-size: 5em;
+                color: $white;
+
+            }
+
+            p {
+                color: $white;
+                font-size: 1.8em;
+                padding: 3em 0;
+            }
+
+            button {
+                background-color: $dark-orange;
+                color: $white;
+                border: none;
+                border-radius: 2em;
+                font-size: 1.7em;
+                width: 8em;
+                height: 2.5em;
+                text-transform: uppercase;
+
+                &:hover {
+                    background-color: $hover-orange;
+                }
+            }
+        }
+
+    }
+
+    .promo {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: $light-orange;
+        align-items: center;
+
+        .promoImg {
+            width: 50%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                vertical-align: middle;
+            }
+
+        }
+    }
+
+    .promoDescription {
+        width: 50%;
+        padding: 0 3em 0 3em;
+
+
+        h1 {
+            color: $white;
+            font-size: 5em;
+        }
+
+        p {
+            color: $white;
+            font-size: 1.8em;
+            padding: 3em 0;
+        }
+
+        button {
+            background-color: $dark-orange;
+            color: $white;
+            border: none;
+            border-radius: 2em;
+            font-size: 1.7em;
+            width: 8em;
+            height: 2.5em;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: $hover-orange;
+            }
+        }
+    }
+}
+
+
+
+.inTheMountains {
+    @include flex;
+    background-image: url(../images/background.png);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+
+
+    h1 {
+        color: $title-white;
+        font-size: 4em;
+        width: 60%;
+        padding-bottom: 1em;
+        text-align: center;
+    }
+
+    p {
+        color: $title-white;
+        width: 60%;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+}
+
+.explore {
+    background-image: url(../images/ShapeExplore.png);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    h2 {
+        color: $light-orange;
+        font-size: 6em;
+        padding-right: 1em;
+        font-style: italic;
+        text-align: end;
+
+        span {
+            color: $darkGray;
+        }
+    }
+}
+
+.textSectionWrapper {
+    @include flex;
+    background-image: url(../images/Shadow.white.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    min-height: 80vh;
+    flex-direction: column;
+
+
+    .textSection {
+        padding-top: 4em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+
+        .text {
+            padding: 2em;
+            font-size: 1.2em;
+        }
+
+        h3 {
+            color: $light-orange;
+            font-size: 2em;
+            padding-bottom: 1em;
+        }
+
+        p {
+            color: #333d42;
+        }
+    }
+
+    .quote {
+        text-align: center;
+        width: 50%;
+        margin: auto;
+
+        h1 {
+            font-size: 7em;
+            font-style: italic;
+            font-family: monospace;
+        }
+
+        p {
+            font-weight: bold;
+            color: #3f3f3f;
+        }
+
+        .author {
+            padding-top: 2em;
+        }
+    }
+}
+
+.subscribeWrapper {
+    @include flex;
+    background-image: url(../images/bckglast.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-top: 10em;
+    flex-direction: column;
+
+
+    .titleText {
+        width: 60%;
+        text-align: center;
+
+        h1 {
+            color: $white;
+            font-size: 4em;
+            padding-bottom: 1.5em;
+        }
+
+        p {
+            padding-bottom: 4em;
+            color: $darkGray;
+            font-size: 1.5em;
+        }
+
+    }
+}
+
+.form_box {
+    position: relative;
+
+    input {
+        border: none;
+        outline: none;
+        border-radius: 2em;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+        display: block;
+        font-size: 1em;
+        height: 42px;
+        padding: 12px 25px;
+        width: 25em;
+    }
+
+    button {
+        background-color: $darkGray;
+        border: 0;
+        border-radius: 2em;
+        color: $white;
+        font-size: 1em;
+        height: 42px;
+        padding: 12px 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        &:hover {
+            background-color: $gray;
+        }
+    }
+}
+
+.footerWrapper {
+    @include flex;
+    background-image: url(../images/footer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    flex-direction: row;
+
+    .socialMediaBox {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2em 3em;
+
+        h1 {
+            color: $white;
+            padding: 1em 1em;
+        }
+
+        p {
+            color: $white;
+            padding: 1em 1em;
+            width: 70%;
+            font-size: 1.3em;
+        }
+
+        .socialMedia {
+            padding: 1em 1em;
+
+            img {
+                padding: 0.4em;
+            }
+        }
+    }
+
+    .other {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-right: 6em;
+
+        .details {
+            display: flex;
+            flex-direction: column;
+
+
+            h1 {
+                color: $white;
+                padding-bottom: 1em;
+
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                padding: 0 0;
+
+
+
+                li {
+                    color: $white;
+                    font-size: 1.1em;
+                    padding: 0.3em 0;
+
+                    &:hover {
+                        color: $hover-gray;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media only screen and (max-width :1300px) {
+    .discountWrapper {
+        .discount .discountDescription {
+            @include descriptionStyleWidth1300;
+        }
+
+        .promo .promoDescription {
+            @include descriptionStyleWidth1300;
+        }
+
+    }
+
+    .explore {
+        background-size: cover;
+
+        h2 {
+            font-size: 5em;
+            padding-right: 1em;
+        }
+    }
+
+    .subscribeWrapper {
+        padding-top: 5em;
+    }
+}
+
+
+
+
+@media only screen and (max-width :1190px) {
+    nav {
+        padding: 0.6em 2.5em 0.6em 0em;
+
+        .nav_Wrapper {
+
+
+            .logo {
+                flex: auto;
+                display: flex;
+                justify-content: center;
+                padding-left: 0.4em;
+            }
+
+            .links {
+                flex: 4;
+
+                ul {
+                    padding: 0 0.3em;
+
+                    .navLi a {
+                        padding: 0 1.7em;
+                    }
+                }
+            }
+        }
+    }
+
+    .discountWrapper {
+        .discount .discountDescription {
+            @include descriptionStyleWidth1190
+        }
+
+        .promo .promoDescription {
+            @include descriptionStyleWidth1190
+        }
+
+    }
+
+    .inTheMountains {
+
+        h1 {
+            font-size: 3.5em;
+            padding-bottom: 0.7em;
+        }
+
+        p {
+            color: $title-white;
+            width: 60%;
+            font-size: 1.2em;
+        }
+    }
+
+    .subscribeWrapper {
+        padding-top: 5em;
+
+        .titleText {
+            h1 {
+                font-size: 3.5em;
+                padding-bottom: 1.2em;
+            }
+
+            p {
+                padding-bottom: 3.5em;
+                font-size: 1.4em;
+            }
+        }
+    }
+
+    .form_box {
+
+        input {
+            width: 22em;
+        }
+    }
+
+
+    .footerWrapper {
+        .socialMediaBox {
+            padding: 1em 2em;
+
+            h1 {
+                padding: 0.8em 0.8em;
+            }
+
+            p {
+                padding: 0.8em 0.8em;
+                width: 70%;
+                font-size: 1.3em;
+            }
+
+            .socialMedia {
+                padding: 0.8em 0.8em;
+            }
+        }
+
+        .other {
+            padding-right: 5em;
+
+            .details {
+
+                h1 {
+                    padding-bottom: 1em;
+                }
+
+                ul {
+                    li {
+                        font-size: 1em;
+                        padding: 0.2em 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width :1000px) {
+    nav {
+        .nav_Wrapper {
+            padding-left: 2em;
+
+            .logo {
+                display: none;
+            }
+        }
+    }
+
+    .links ul {
+        padding: 0 2.4em;
+
+        .navLi {
+            a {
+                padding: 0 1.5em;
+
+            }
+        }
+    }
+
+    .timeForHiking .timeForHikingWrapper {
+        padding: 18em;
+        padding-left: 3em;
+
+
+        h1 {
+            font-size: 5.5em;
+        }
+    }
+
+    .discountWrapper {
+        .discount .discountDescription {
+            @include descriptionStyleWidth1000
+        }
+
+        .promo .promoDescription {
+            @include descriptionStyleWidth1000
+        }
+
+    }
+
+    .inTheMountains {
+
+        h1 {
+            font-size: 3.1em;
+            padding-bottom: 0.7em;
+        }
+
+        p {
+            color: $title-white;
+            width: 60%;
+            font-size: 1em;
+        }
+    }
+
+
+    .explore {
+        justify-content: center;
+        align-items: flex-start;
+
+        h2 {
+            padding-top: 1.8em;
+            font-size: 5em;
+            padding-right: 0em;
+            text-align: center;
+
+            span {
+                color: $darkGray;
+            }
+        }
+
+
+    }
+
+    .textSectionWrapper {
+        .textSection {
+            padding-top: 3em;
+
+            .text {
+                padding: 1.5em;
+                font-size: 1em;
+            }
+
+            h3 {
+                font-size: 2em;
+                padding-bottom: 0.7em;
+            }
+        }
+
+        .quote {
+
+            h1 {
+                font-size: 6em;
+            }
+
+            p {
+                font-weight: bold;
+            }
+
+            .author {
+                padding-top: 2em;
+            }
+        }
+    }
+
+
+    .footerWrapper {
+        .socialMediaBox {
+            width: 40%;
+            padding-top: 10em;
+            align-items: center;
+
+            h1 {
+                padding: 1em 1em;
+            }
+
+            p {
+                padding: 0;
+                width: 100%;
+                text-align: center;
+                text-align: justify;
+                font-size: 1.2em;
+            }
+
+            .socialMedia {
+                padding: 0;
+
+
+                img {
+                    padding: 2em 0 0 0.1em;
+                }
+
+
+            }
+        }
+
+
+        .other {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10em;
+            text-align: center;
+            padding-right: 0;
+
+            .details {
+                display: flex;
+                flex-direction: column;
+                padding-top: 1em;
+
+                h1 {
+                    padding-bottom: 0.2em;
+
+                }
+
+                ul {
+                    li {
+                        font-size: 1em;
+
+
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width :770px) {
+
+    nav .nav_Wrapper {
+        margin-top: 1em;
+        align-items: flex-start;
+
+        .search {
+            padding-top: 0.2em;
+
+            input {
+                display: none
+            }
+        }
+    }
+
+    .links {
+
+        ul {
+            @include flex;
+            flex-direction: column;
+            padding-top: 0.7em;
+
+
+            &:hover>.navLi {
+                display: block;
+                transition: all 0.3s;
+
+            }
+
+
+            .navLi {
+                line-height: 2em;
+                display: none;
+                width: 100%;
+                text-align: center;
+            }
+
+            .dummy {
+                font-size: 1.7em;
+                display: block;
+            }
+
+        }
+    }
+
+    .timeForHiking {
+
+        background-position: -10em;
+
+        .timeForHikingWrapper {
+            padding: 14em;
+            padding-left: 2.5em;
+
+            h1 {
+                font-size: 4.3em;
+            }
+
+            h4 {
+                width: 10em;
+                font-size: 1.3em;
+            }
+
+            .readMoreButton {
+                P {
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
+
+    .discountWrapper {
+        .discount {
+            display: flex;
+            flex-direction: column;
+            width: 25em;
+            margin-bottom: 1em;
+            margin: auto;
+            margin-bottom: 2em;
+            text-align: center;
+
+
+            .discountImg {
+                width: 25em;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .discountDescription {
+                padding: 0;
+
+                h1 {
+                    font-size: 2em;
+                    padding-top: 1em;
+                }
+
+                p {
+                    font-size: 1em;
+                    padding: 1em 0;
+                    text-align: justify;
+                }
+
+                button {
+                    font-size: 1em;
+                    margin-bottom: 2em;
+                }
+            }
+        }
+
+        .promo {
+            display: flex;
+            flex-direction: column-reverse;
+            width: 25em;
+            margin-bottom: 1em;
+            margin: auto;
+            text-align: center;
+
+            .promoImg {
+                width: 25em;
+
+                img {
+                    width: 100%;
+                }
+
+            }
+
+            .promoDescription {
+                padding: 0;
+
+                h1 {
+                    font-size: 2em;
+                    padding-top: 1em;
+                }
+
+                p {
+                    font-size: 1em;
+                    padding: 1em 0;
+                    text-align: justify;
+                }
+
+                button {
+                    font-size: 1em;
+                    margin-bottom: 2em;
+                }
+            }
+
+        }
+    }
+
+    .inTheMountains {
+
+        h1 {
+            font-size: 3em;
+            padding-bottom: 0.5em;
+        }
+
+        p {
+            color: $title-white;
+            width: 60%;
+            font-size: 0.8em;
+        }
+    }
+
+    .textSectionWrapper {
+        .textSection {
+            padding-top: 0;
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+    }
+
+    .footerWrapper {
+        .socialMediaBox {
+
+            h1 {
+                padding: 1em 1em;
+                font-size: 1.6em;
+            }
+
+            P {
+                padding: 0;
+            }
+
+            .socialMedia {
+                padding-top: 1em;
+                width: 8em;
+
+                img {
+                    padding: 0.5em 0 0 0.5em;
+                }
+
+            }
+        }
+
+
+
+    }
+
+}
+
+
+@media only screen and (max-width :530px) {
+    .timeForHiking {
+
+        .timeForHikingWrapper {
+            padding: 10em;
+            padding-left: 2em;
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h4 {
+                width: 10em;
+                font-size: 1em;
+            }
+
+            .readMoreButton {
+                P {
+                    width: 14em;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width :530px) {
+
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .discountWrapper .discount {
+        width: 100%;
+
+
+    }
+
+    .discountWrapper .promo {
+        width: 100%;
+
+
+    }
+
+    .footerWrapper {
+        flex-direction: column;
+
+        .socialMediaBox {
+            width: 100%;
+            padding-top: 20em;
+
+            .socialMedia {
+                width: auto;
+            }
+        }
+
+        .other {
+            padding-top: 2em;
+        }
+    }
+
+}

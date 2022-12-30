@@ -1,0 +1,932 @@
+@font-face {
+  font-family: "lato";
+  src: url(../fonts/Lato-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: lato;
+}
+
+nav {
+  background-color: #ffffff;
+  padding: 0.6em 3em 0.6em 4.3em;
+}
+nav .nav_Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 7em;
+}
+nav .nav_Wrapper .logo {
+  flex: 1;
+}
+nav .nav_Wrapper .logo img {
+  padding: 0.3em 0;
+}
+nav .nav_Wrapper .search input {
+  width: 11em;
+  height: 3.1em;
+  border-radius: 2em;
+  border: none;
+  outline-color: #54524f;
+  background-color: #c3bfbc;
+  background-image: url(../images/Search.png);
+  background-repeat: no-repeat;
+  background-position: 7.2em;
+  padding: 0 1em;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0 3.7em;
+}
+ul .dummy {
+  text-decoration: none;
+  color: #54524f;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0 3em;
+  display: none;
+}
+ul .navLi {
+  display: inline-flex;
+  height: 2em;
+  align-items: center;
+  border-radius: 2em;
+}
+ul .navLi:hover {
+  background-color: #e9e7e5;
+  cursor: pointer;
+}
+ul .navLi a {
+  text-decoration: none;
+  color: #54524f;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0 3em;
+}
+
+.offersWrapper {
+  background-image: url(../images/Shadow\ .png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  min-height: 60em;
+}
+.offersWrapper .offersTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.offersWrapper .offersTitle h1 {
+  color: #e2a355;
+  text-transform: uppercase;
+  font-size: 3em;
+  font-family: sans-serif;
+  padding: 2em 0 1em 0;
+}
+.offersWrapper .offersTitle p {
+  color: #7f7770;
+  width: 50%;
+}
+.offersWrapper .offers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 2em 0;
+  margin: auto;
+}
+.offersWrapper .offers .offer {
+  margin: 1.4em;
+  background-color: rgba(127, 119, 112, 0.9490196078);
+  transition: 400ms ease 10ms;
+}
+.offersWrapper .offers .offer:hover {
+  transform: scale(1.1);
+}
+.offersWrapper .offers .offer h3 {
+  color: #ffffff;
+  padding: 3.5em 0 1em 0.7em;
+  align-self: flex-start;
+}
+.offersWrapper .offers .offer p {
+  align-self: flex-start;
+  padding: 0 0 3.7em 0.7em;
+  color: #ffffff;
+}
+.offersWrapper .offers .offer img {
+  width: 100%;
+}
+.offersWrapper .showMoreOffers button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1em;
+  width: 15em;
+  height: 3.1em;
+  border-radius: 2em;
+  border: none;
+  background-color: #7f7770;
+  margin: auto;
+}
+.offersWrapper .showMoreOffers button:hover {
+  background-color: #a39a92;
+}
+
+.timeForHiking {
+  min-height: 80vh;
+  background-image: url(../images/Main\ background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.timeForHiking .timeForHikingWrapper {
+  padding: 20em;
+  padding-left: 4em;
+}
+.timeForHiking .timeForHikingWrapper h1 {
+  color: #deb37e;
+  font-size: 7em;
+  padding-bottom: 0.2em;
+  width: 6em;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+.timeForHiking h4 {
+  font-size: 1.5em;
+  font-style: italic;
+  color: #54524f;
+}
+
+.readMoreButton {
+  padding-top: 3.6em;
+}
+.readMoreButton button {
+  background-color: #fefefd;
+  color: #776c64;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 1em;
+  width: 11em;
+  height: 2.5em;
+  border-radius: 2em;
+  border: none;
+}
+.readMoreButton button:hover {
+  background-color: #ffffff;
+  color: #555352;
+}
+.readMoreButton p {
+  width: 20em;
+  padding-top: 2em;
+  font-style: italic;
+  font-size: 1.5em;
+  color: #54524f;
+}
+.readMoreButton p #more {
+  display: none;
+}
+
+.discountWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+}
+.discountWrapper .discount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: #7f7770;
+}
+.discountWrapper .discount .discountImg {
+  width: 50%;
+}
+.discountWrapper .discount .discountImg img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.discountWrapper .discount .discountDescription {
+  width: 50%;
+  padding: 0 3em 0 3em;
+}
+.discountWrapper .discount .discountDescription h1 {
+  font-size: 5em;
+  color: #ffffff;
+}
+.discountWrapper .discount .discountDescription p {
+  color: #ffffff;
+  font-size: 1.8em;
+  padding: 3em 0;
+}
+.discountWrapper .discount .discountDescription button {
+  background-color: #e2a355;
+  color: #ffffff;
+  border: none;
+  border-radius: 2em;
+  font-size: 1.7em;
+  width: 8em;
+  height: 2.5em;
+  text-transform: uppercase;
+}
+.discountWrapper .discount .discountDescription button:hover {
+  background-color: #b98b52;
+}
+.discountWrapper .promo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #deb37e;
+  align-items: center;
+}
+.discountWrapper .promo .promoImg {
+  width: 50%;
+}
+.discountWrapper .promo .promoImg img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.discountWrapper .promoDescription {
+  width: 50%;
+  padding: 0 3em 0 3em;
+}
+.discountWrapper .promoDescription h1 {
+  color: #ffffff;
+  font-size: 5em;
+}
+.discountWrapper .promoDescription p {
+  color: #ffffff;
+  font-size: 1.8em;
+  padding: 3em 0;
+}
+.discountWrapper .promoDescription button {
+  background-color: #e2a355;
+  color: #ffffff;
+  border: none;
+  border-radius: 2em;
+  font-size: 1.7em;
+  width: 8em;
+  height: 2.5em;
+  text-transform: uppercase;
+}
+.discountWrapper .promoDescription button:hover {
+  background-color: #b98b52;
+}
+
+.inTheMountains {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/background.png);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+}
+.inTheMountains h1 {
+  color: #f8f8f7;
+  font-size: 4em;
+  width: 60%;
+  padding-bottom: 1em;
+  text-align: center;
+}
+.inTheMountains p {
+  color: #f8f8f7;
+  width: 60%;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.explore {
+  background-image: url(../images/ShapeExplore.png);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.explore h2 {
+  color: #deb37e;
+  font-size: 6em;
+  padding-right: 1em;
+  font-style: italic;
+  text-align: end;
+}
+.explore h2 span {
+  color: #54524f;
+}
+
+.textSectionWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/Shadow.white.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  min-height: 80vh;
+  flex-direction: column;
+}
+.textSectionWrapper .textSection {
+  padding-top: 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+.textSectionWrapper .textSection .text {
+  padding: 2em;
+  font-size: 1.2em;
+}
+.textSectionWrapper .textSection h3 {
+  color: #deb37e;
+  font-size: 2em;
+  padding-bottom: 1em;
+}
+.textSectionWrapper .textSection p {
+  color: #333d42;
+}
+.textSectionWrapper .quote {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+.textSectionWrapper .quote h1 {
+  font-size: 7em;
+  font-style: italic;
+  font-family: monospace;
+}
+.textSectionWrapper .quote p {
+  font-weight: bold;
+  color: #3f3f3f;
+}
+.textSectionWrapper .quote .author {
+  padding-top: 2em;
+}
+
+.subscribeWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/bckglast.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: 10em;
+  flex-direction: column;
+}
+.subscribeWrapper .titleText {
+  width: 60%;
+  text-align: center;
+}
+.subscribeWrapper .titleText h1 {
+  color: #ffffff;
+  font-size: 4em;
+  padding-bottom: 1.5em;
+}
+.subscribeWrapper .titleText p {
+  padding-bottom: 4em;
+  color: #54524f;
+  font-size: 1.5em;
+}
+
+.form_box {
+  position: relative;
+}
+.form_box input {
+  border: none;
+  outline: none;
+  border-radius: 2em;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  display: block;
+  font-size: 1em;
+  height: 42px;
+  padding: 12px 25px;
+  width: 25em;
+}
+.form_box button {
+  background-color: #54524f;
+  border: 0;
+  border-radius: 2em;
+  color: #ffffff;
+  font-size: 1em;
+  height: 42px;
+  padding: 12px 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.form_box button:hover {
+  background-color: #7f7770;
+}
+
+.footerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/footer.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  flex-direction: row;
+}
+.footerWrapper .socialMediaBox {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2em 3em;
+}
+.footerWrapper .socialMediaBox h1 {
+  color: #ffffff;
+  padding: 1em 1em;
+}
+.footerWrapper .socialMediaBox p {
+  color: #ffffff;
+  padding: 1em 1em;
+  width: 70%;
+  font-size: 1.3em;
+}
+.footerWrapper .socialMediaBox .socialMedia {
+  padding: 1em 1em;
+}
+.footerWrapper .socialMediaBox .socialMedia img {
+  padding: 0.4em;
+}
+.footerWrapper .other {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-right: 6em;
+}
+.footerWrapper .other .details {
+  display: flex;
+  flex-direction: column;
+}
+.footerWrapper .other .details h1 {
+  color: #ffffff;
+  padding-bottom: 1em;
+}
+.footerWrapper .other .details ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0;
+}
+.footerWrapper .other .details ul li {
+  color: #ffffff;
+  font-size: 1.1em;
+  padding: 0.3em 0;
+}
+.footerWrapper .other .details ul li:hover {
+  color: #555352;
+}
+
+@media only screen and (max-width: 1300px) {
+  .discountWrapper .discount .discountDescription h1 {
+    font-size: 3.7em;
+  }
+  .discountWrapper .discount .discountDescription p {
+    font-size: 1.5em;
+    padding: 3em 0;
+  }
+  .discountWrapper .discount .discountDescription button {
+    font-size: 1.3em;
+  }
+  .discountWrapper .promo .promoDescription h1 {
+    font-size: 3.7em;
+  }
+  .discountWrapper .promo .promoDescription p {
+    font-size: 1.5em;
+    padding: 3em 0;
+  }
+  .discountWrapper .promo .promoDescription button {
+    font-size: 1.3em;
+  }
+  .explore {
+    background-size: cover;
+  }
+  .explore h2 {
+    font-size: 5em;
+    padding-right: 1em;
+  }
+  .subscribeWrapper {
+    padding-top: 5em;
+  }
+}
+@media only screen and (max-width: 1190px) {
+  nav {
+    padding: 0.6em 2.5em 0.6em 0em;
+  }
+  nav .nav_Wrapper .logo {
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    padding-left: 0.4em;
+  }
+  nav .nav_Wrapper .links {
+    flex: 4;
+  }
+  nav .nav_Wrapper .links ul {
+    padding: 0 0.3em;
+  }
+  nav .nav_Wrapper .links ul .navLi a {
+    padding: 0 1.7em;
+  }
+  .discountWrapper .discount .discountDescription h1 {
+    font-size: 3em;
+  }
+  .discountWrapper .discount .discountDescription p {
+    font-size: 1.4em;
+    padding: 2em 0;
+  }
+  .discountWrapper .discount .discountDescription button {
+    font-size: 1em;
+  }
+  .discountWrapper .promo .promoDescription h1 {
+    font-size: 3em;
+  }
+  .discountWrapper .promo .promoDescription p {
+    font-size: 1.4em;
+    padding: 2em 0;
+  }
+  .discountWrapper .promo .promoDescription button {
+    font-size: 1em;
+  }
+  .inTheMountains h1 {
+    font-size: 3.5em;
+    padding-bottom: 0.7em;
+  }
+  .inTheMountains p {
+    color: #f8f8f7;
+    width: 60%;
+    font-size: 1.2em;
+  }
+  .subscribeWrapper {
+    padding-top: 5em;
+  }
+  .subscribeWrapper .titleText h1 {
+    font-size: 3.5em;
+    padding-bottom: 1.2em;
+  }
+  .subscribeWrapper .titleText p {
+    padding-bottom: 3.5em;
+    font-size: 1.4em;
+  }
+  .form_box input {
+    width: 22em;
+  }
+  .footerWrapper .socialMediaBox {
+    padding: 1em 2em;
+  }
+  .footerWrapper .socialMediaBox h1 {
+    padding: 0.8em 0.8em;
+  }
+  .footerWrapper .socialMediaBox p {
+    padding: 0.8em 0.8em;
+    width: 70%;
+    font-size: 1.3em;
+  }
+  .footerWrapper .socialMediaBox .socialMedia {
+    padding: 0.8em 0.8em;
+  }
+  .footerWrapper .other {
+    padding-right: 5em;
+  }
+  .footerWrapper .other .details h1 {
+    padding-bottom: 1em;
+  }
+  .footerWrapper .other .details ul li {
+    font-size: 1em;
+    padding: 0.2em 0;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  nav .nav_Wrapper {
+    padding-left: 2em;
+  }
+  nav .nav_Wrapper .logo {
+    display: none;
+  }
+  .links ul {
+    padding: 0 2.4em;
+  }
+  .links ul .navLi a {
+    padding: 0 1.5em;
+  }
+  .timeForHiking .timeForHikingWrapper {
+    padding: 18em;
+    padding-left: 3em;
+  }
+  .timeForHiking .timeForHikingWrapper h1 {
+    font-size: 5.5em;
+  }
+  .discountWrapper .discount .discountDescription h1 {
+    font-size: 2em;
+  }
+  .discountWrapper .discount .discountDescription p {
+    font-size: 1em;
+    padding: 1.8em 0;
+  }
+  .discountWrapper .discount .discountDescription button {
+    font-size: 1em;
+  }
+  .discountWrapper .promo .promoDescription h1 {
+    font-size: 2em;
+  }
+  .discountWrapper .promo .promoDescription p {
+    font-size: 1em;
+    padding: 1.8em 0;
+  }
+  .discountWrapper .promo .promoDescription button {
+    font-size: 1em;
+  }
+  .inTheMountains h1 {
+    font-size: 3.1em;
+    padding-bottom: 0.7em;
+  }
+  .inTheMountains p {
+    color: #f8f8f7;
+    width: 60%;
+    font-size: 1em;
+  }
+  .explore {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .explore h2 {
+    padding-top: 1.8em;
+    font-size: 5em;
+    padding-right: 0em;
+    text-align: center;
+  }
+  .explore h2 span {
+    color: #54524f;
+  }
+  .textSectionWrapper .textSection {
+    padding-top: 3em;
+  }
+  .textSectionWrapper .textSection .text {
+    padding: 1.5em;
+    font-size: 1em;
+  }
+  .textSectionWrapper .textSection h3 {
+    font-size: 2em;
+    padding-bottom: 0.7em;
+  }
+  .textSectionWrapper .quote h1 {
+    font-size: 6em;
+  }
+  .textSectionWrapper .quote p {
+    font-weight: bold;
+  }
+  .textSectionWrapper .quote .author {
+    padding-top: 2em;
+  }
+  .footerWrapper .socialMediaBox {
+    width: 40%;
+    padding-top: 10em;
+    align-items: center;
+  }
+  .footerWrapper .socialMediaBox h1 {
+    padding: 1em 1em;
+  }
+  .footerWrapper .socialMediaBox p {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    text-align: justify;
+    font-size: 1.2em;
+  }
+  .footerWrapper .socialMediaBox .socialMedia {
+    padding: 0;
+  }
+  .footerWrapper .socialMediaBox .socialMedia img {
+    padding: 2em 0 0 0.1em;
+  }
+  .footerWrapper .other {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10em;
+    text-align: center;
+    padding-right: 0;
+  }
+  .footerWrapper .other .details {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+  }
+  .footerWrapper .other .details h1 {
+    padding-bottom: 0.2em;
+  }
+  .footerWrapper .other .details ul li {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 770px) {
+  nav .nav_Wrapper {
+    margin-top: 1em;
+    align-items: flex-start;
+  }
+  nav .nav_Wrapper .search {
+    padding-top: 0.2em;
+  }
+  nav .nav_Wrapper .search input {
+    display: none;
+  }
+  .links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 0.7em;
+  }
+  .links ul:hover > .navLi {
+    display: block;
+    transition: all 0.3s;
+  }
+  .links ul .navLi {
+    line-height: 2em;
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .links ul .dummy {
+    font-size: 1.7em;
+    display: block;
+  }
+  .timeForHiking {
+    background-position: -10em;
+  }
+  .timeForHiking .timeForHikingWrapper {
+    padding: 14em;
+    padding-left: 2.5em;
+  }
+  .timeForHiking .timeForHikingWrapper h1 {
+    font-size: 4.3em;
+  }
+  .timeForHiking .timeForHikingWrapper h4 {
+    width: 10em;
+    font-size: 1.3em;
+  }
+  .timeForHiking .timeForHikingWrapper .readMoreButton P {
+    font-size: 1.3em;
+  }
+  .discountWrapper .discount {
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+    margin-bottom: 1em;
+    margin: auto;
+    margin-bottom: 2em;
+    text-align: center;
+  }
+  .discountWrapper .discount .discountImg {
+    width: 25em;
+  }
+  .discountWrapper .discount .discountImg img {
+    width: 100%;
+  }
+  .discountWrapper .discount .discountDescription {
+    padding: 0;
+  }
+  .discountWrapper .discount .discountDescription h1 {
+    font-size: 2em;
+    padding-top: 1em;
+  }
+  .discountWrapper .discount .discountDescription p {
+    font-size: 1em;
+    padding: 1em 0;
+    text-align: justify;
+  }
+  .discountWrapper .discount .discountDescription button {
+    font-size: 1em;
+    margin-bottom: 2em;
+  }
+  .discountWrapper .promo {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 25em;
+    margin-bottom: 1em;
+    margin: auto;
+    text-align: center;
+  }
+  .discountWrapper .promo .promoImg {
+    width: 25em;
+  }
+  .discountWrapper .promo .promoImg img {
+    width: 100%;
+  }
+  .discountWrapper .promo .promoDescription {
+    padding: 0;
+  }
+  .discountWrapper .promo .promoDescription h1 {
+    font-size: 2em;
+    padding-top: 1em;
+  }
+  .discountWrapper .promo .promoDescription p {
+    font-size: 1em;
+    padding: 1em 0;
+    text-align: justify;
+  }
+  .discountWrapper .promo .promoDescription button {
+    font-size: 1em;
+    margin-bottom: 2em;
+  }
+  .inTheMountains h1 {
+    font-size: 3em;
+    padding-bottom: 0.5em;
+  }
+  .inTheMountains p {
+    color: #f8f8f7;
+    width: 60%;
+    font-size: 0.8em;
+  }
+  .textSectionWrapper .textSection {
+    padding-top: 0;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footerWrapper .socialMediaBox h1 {
+    padding: 1em 1em;
+    font-size: 1.6em;
+  }
+  .footerWrapper .socialMediaBox P {
+    padding: 0;
+  }
+  .footerWrapper .socialMediaBox .socialMedia {
+    padding-top: 1em;
+    width: 8em;
+  }
+  .footerWrapper .socialMediaBox .socialMedia img {
+    padding: 0.5em 0 0 0.5em;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .timeForHiking .timeForHikingWrapper {
+    padding: 10em;
+    padding-left: 2em;
+  }
+  .timeForHiking .timeForHikingWrapper h1 {
+    font-size: 2.5em;
+  }
+  .timeForHiking .timeForHikingWrapper h4 {
+    width: 10em;
+    font-size: 1em;
+  }
+  .timeForHiking .timeForHikingWrapper .readMoreButton P {
+    width: 14em;
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 530px) {
+  html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .discountWrapper .discount {
+    width: 100%;
+  }
+  .discountWrapper .promo {
+    width: 100%;
+  }
+  .footerWrapper {
+    flex-direction: column;
+  }
+  .footerWrapper .socialMediaBox {
+    width: 100%;
+    padding-top: 20em;
+  }
+  .footerWrapper .socialMediaBox .socialMedia {
+    width: auto;
+  }
+  .footerWrapper .other {
+    padding-top: 2em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
